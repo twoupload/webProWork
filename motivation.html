@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* 테이블 스타일링 */
+    table {
+      width: 100%;
+      color: white;  /* 글자 색 변경 */
+    }
+    th {
+      text-align: left;
+    }
+    td, th {
+      padding: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 315px;
+    }
+    /* 제목 가운데 정렬, 그림자 추가 */
+    h1 {
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 4px #000000; /* 그림자 적용 */
+    }
+    /* 테이블 첫 번째 셀 볼드체 적용 */
+    td:first-child {
+      font-weight: bold;
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Motivation Videos</title>
+</head>
+<body>
+  <div class="background-image"></div>
+  <h1 style="color: white;">힘이 나는 영상들</h1>  <!-- 제목 글자 색 변경 -->
+  <div id="video-container">
+    <table></table>
+  </div>
+
+  <script>
+    const videos = {
+      '위로': [
+        '1ZZNJT6HpVg',
+        'ESN_3V87yJI&t=11s',
+        '5_52kGfD-Yw',
+      ],
+      '동기': [
+        '3TfOQXohGx0',
+        'ubJSFFaWtcM',
+        'FOJ8Z3bXnCw',
+      ],
+    };
+
+    const table = document.querySelector('#video-container table');
+
+    for (const category in videos) {
+      const row = table.insertRow(-1);
+      const cell1 = row.insertCell(0);
+      cell1.textContent = category;
+
+      const cell2 = row.insertCell(1);
+      for (const video of videos[category]) {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${video}`;
+        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allowFullscreen = true;
+        cell2.appendChild(iframe);
+      }
+    }
+  </script>
+  <script src="js/background.js"></script>
+</body>
+</html>
