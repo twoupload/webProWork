@@ -1,0 +1,176 @@
+/* style.css */
+
+/* 전체 페이지 스타일링 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  
+  /* 시계 스타일링 */
+  #clock {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 6px 6px black;
+  }
+  
+  /* 로그인 폼 스타일링 */
+  #login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #login-form input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #login-form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* 환영 메시지 스타일링 */
+  #greeting {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* 할 일 입력 폼 스타일링 */
+  #todo-form {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #todo-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* 할 일 목록 스타일링 */
+  #todo-list {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #todo-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+/* 인용구 스타일링 */
+#quote {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  #quote span {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  /* 반응형 스타일링 */
+  @media (max-width: 600px) {
+    /* 화면 너비가 600px 이하일 때 적용되는 스타일 */
+    #clock {
+      font-size: 32px;
+    }
+  
+    #login-form input[type="text"] {
+      width: 100%;
+    }
+  }
+  /* 인용구 스타일링 2*/  
+  #quote span {
+    display: block;
+    font-size: 24px; /* 글씨 크기 조정 */
+    font-weight: bold; /* 글씨 굵기 조정 */
+    margin-bottom: 10px; /* 간격 조정 */
+    text-shadow: 2px 6px 6px black;
+  }
+  
+  /* 할 일 입력 폼 스타일링 */
+  #todo-form {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center; /* 가운데 정렬을 위해 추가 */
+  }
+  
+  #todo-form input[type="text"] {
+    width: 100%;
+    max-width: 300px; /* 최대 가로 너비 조정 */
+    padding: 10px;
+    box-sizing: border-box; /* 입력 창의 크기가 너비에 맞도록 조정 */
+  }
+  
+  /* 추가된 내용을 담는 박스 스타일링 */
+  #todo-list {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    text-align: center; /* 가운데 정렬을 위해 추가 */
+    margin: 0 auto; /* 수평 가운데 정렬 */
+    max-width: 400px; /* 최대 가로 너비 조정 */
+    color: white;
+  }
+
+  #todo-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 20px; /* 글자 크기를 키움 */
+    font-weight: bold; /* 글자를 볼드체로 변경 */
+    text-shadow: 2px 2px 4px #000000; /* 그림자 추가 */
+  }
+
+  /* 버튼 링크 */
+  .button a{
+    margin: 20px 0; /* 버튼 사이의 간격 조정 */
+    font-size: 20px; /* 글자 크기 조정 */
+    text-decoration: none;
+    color: white;
+  }
+
+  /* 중앙 정렬*/
+  #button-container {
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  
+  
